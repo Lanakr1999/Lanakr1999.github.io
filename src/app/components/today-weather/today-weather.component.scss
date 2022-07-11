@@ -62,7 +62,7 @@
   }
 
   .wind{
-    width: 28%;
+    width: 36%;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -70,7 +70,7 @@
 
     .wind-info{
       width: 100%;
-      margin-top: 5%;
+      margin-top: 10px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -87,11 +87,228 @@
 
     .sun-rise-info{
       width: 100%;
-      margin-top: 5%;
+      margin-top: 10px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       border-bottom: 1px solid black;
+    }
+  }
+}
+
+@media (max-width: 1350px) {
+  .header{
+    p{
+      font-size: 22px;
+    }
+  }
+  .main{
+    .weather-description{
+      img{
+        width: 90%;
+      }
+      p{
+        font-size: 20px;
+      }
+    }
+    .temperature{
+      .small-text{
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1160px) {
+  .header{
+    p{
+      font-size: 20px;
+    }
+  }
+  .main{
+    .weather-description{
+      justify-content: space-evenly;
+      p{
+        font-size: 19px;
+      }
+    }
+    .temperature{
+      .bix-text{
+        font-size: 35px;
+      }
+      .small-text{
+        font-size: 18px;
+      }
+    }
+    .wind{
+      .wind-info{
+        p{
+          font-size: 16px;
+        }
+      }
+    }
+    .sun-rise{
+      .sun-rise-info{
+        p{
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  .main{
+    .weather-description{
+      height: 50%;
+      justify-content: space-between;
+      img{
+        height: 90%;
+        width: 90%;
+      }
+    }
+    height: 80%;
+    flex-wrap: wrap;
+    .temperature{
+      width: 30%;
+      height: 40%;
+      justify-content: space-between;
+      .bix-text{
+        font-size: 50px;
+      }
+      .small-text{
+        font-size: 22px;
+      }
+    }
+    .sun-rise{
+      height: 40%;
+      width: 30%;
+    }
+    .wind{
+      height: 40%;
+      width: 70%;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .main{
+    .weather-description{
+      height: 40%;
+      justify-content: space-between;
+      img{
+        height: 90%;
+        width: 90%;
+      }
+    }
+      .temperature{
+        justify-content: space-evenly;
+        .bix-text{
+          font-size: 45px;
+        }
+        .small-text{
+          font-size: 18px;
+        }
+      }
+  }
+}
+
+@media (max-width: 660px) {
+  .header{
+    h3{
+      font-size: 17px;
+    }
+    p{
+      font-size: 17px;
+    }
+  }
+  .main{
+    .weather-description{
+      justify-content: space-evenly;
+      img{
+        height: 75%;
+        width: 70%;
+      }
+      p{
+        font-size: 14px;
+      }
+    }
+      .temperature{
+        .bix-text{
+          font-size: 25px;
+        }
+        .small-text{
+          font-size: 11px;
+        }
+      }
+    .wind{
+      height: 50%;
+      .wind-info{
+        p{
+          font-size: 12px;
+        }
+      }
+    }
+    .sun-rise{
+      .sun-rise-info{
+        margin-top: 1px;
+        p{
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .header{
+    h3{
+      font-size: 13px;
+    }
+    p{
+      font-size: 13px;
+    }
+  }
+  .main{
+    .weather-description{
+      justify-content: space-evenly;
+      img{
+        height: 60%;
+        width: 60%;
+      }
+      p{
+        font-size: 12px;
+        font-weight: bold;
+      }
+    }
+    .temperature{
+      .bix-text{
+        font-size: 20px;
+      }
+      .small-text{
+        font-size: 10px;
+        font-weight: bold;
+      }
+    }
+    .wind{
+      height: 50%;
+      width: 85%;
+      .wind-info{
+        margin-top: 1px;
+        p{
+          font-size: 10px;
+          font-weight: bold;
+        }
+      }
+    }
+    .sun-rise{
+      .sun-rise-info{
+        margin-top: 1px;
+        p{
+          font-size: 9px;
+          font-weight: bold;
+        }
+      }
     }
   }
 }

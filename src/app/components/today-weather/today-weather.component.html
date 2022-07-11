@@ -14,21 +14,6 @@
     <p class="small-text">ощущается как {{getTemperature(todayWeather.main.feels_like)}}&#176;C</p>
   </div>
 
-  <div class="wind">
-    <div class="wind-info">
-      <p>Скорость ветра</p>
-      <p>{{todayWeather.wind.speed}}м/с</p>
-    </div>
-    <div class="wind-info">
-      <p>Порывы ветра</p>
-      <p>{{todayWeather.wind.gust}}м/с</p>
-    </div>
-    <div class="wind-info">
-      <p>Напаравление ветра</p>
-      <p>{{getWindDestination(todayWeather.wind.deg)}}</p>
-    </div>
-  </div>
-
   <div class="sun-rise">
     <div class="sun-rise-info">
       <p>Восход</p>
@@ -41,6 +26,21 @@
     <div class="sun-rise-info">
       <p>Длительность</p>
       <p>{{calculateSunriseDuration(todayWeather.sys.sunset - todayWeather.sys.sunrise)}}</p>
+    </div>
+  </div>
+
+  <div class="wind">
+    <div class="wind-info">
+      <p>Скорость ветра</p>
+      <p>{{todayWeather.wind.speed}}м/с</p>
+    </div>
+    <div class="wind-info">
+      <p>Порывы ветра</p>
+      <p>{{todayWeather.wind.gust}}м/с</p>
+    </div>
+    <div class="wind-info">
+      <p>Направление ветра</p>
+      <p>{{getWindDestination(todayWeather.wind.deg)}}</p>
     </div>
   </div>
 

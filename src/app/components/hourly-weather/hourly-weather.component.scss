@@ -28,3 +28,33 @@
     font-size: 15px;
   }
 }
+
+@media (max-width: 1160px) {
+  .one-hour-container{
+    width: 23%;
+    height: 40%;
+  }
+}
+
+@media (max-width: 800px) {
+  .one-hour-container{
+    height: 35%;
+    p{
+      font-size: 18px;
+    }
+    .img-container{
+      width: 35%;
+      height: 40%;
+    }
+    .lower-text{
+      font-size: 13px;
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .one-hour-container{
+    height: 20%;
+    width: 45%;
+  }
+}

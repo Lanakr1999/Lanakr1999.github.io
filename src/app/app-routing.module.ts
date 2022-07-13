@@ -6,10 +6,10 @@ import {AppComponent} from "./app.component";
 import {NotFoundComponent} from "./components/not-found/not-found.component";
 
 const routes: Routes = [
-  { path: '', redirectTo: 'today-weather', pathMatch: 'full'},
-  { path: 'today-weather', component: TodayWeatherComponent},
-  { path: 'five-day-weather', component: TodayWeatherComponent},
-  { path: '**', component: NotFoundComponent}
+  // { path: '', redirectTo: 'today-weather', pathMatch: 'full'},
+  // { path: 'today-weather', component: TodayWeatherComponent},
+  // { path: 'five-day-weather', component: TodayWeatherComponent},
+  // { path: '**', component: NotFoundComponent}
 ];
 
 @NgModule({

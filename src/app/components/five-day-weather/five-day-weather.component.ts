@@ -10,9 +10,9 @@ import {catchError} from "rxjs";
 export class FiveDayWeatherComponent implements OnInit {
 
 
+
   @Input() fiveDayWeather!: IFiveDayWeather;
   @Output() sendHourlyWeatherList = new EventEmitter<any[]>();
-
 
   fiveDayWeatherList: any[] = [];
   hourlyWeatherDaysList: any[] = [];
@@ -24,7 +24,7 @@ export class FiveDayWeatherComponent implements OnInit {
     this.getFiveDaysList(this.fiveDayWeather.list);
   }
 
-  getHourlyWeather(fullList: any,list: any, day: any) {
+  getHourlyWeather(fullList: any, list: any, day: any) {
     try {
       let numOfDay = list.indexOf(day);
       let date = list[numOfDay].dt_txt;
@@ -48,6 +48,7 @@ export class FiveDayWeatherComponent implements OnInit {
         }
       }
       this.hourlyWeather = hoursArr;
+      this.getFiveDaysList(this.fiveDayWeather.list);
       this.sendHourlyWeatherList.emit(this.hourlyWeather);
     }
     catch (err){
@@ -56,8 +57,9 @@ export class FiveDayWeatherComponent implements OnInit {
     return ;
   }
 
-  getFiveDaysList(list: any): void {
+getFiveDaysList(list: any): any[] {
     let fiveDayWeatherList = [];
+    // console.log(list);
     fiveDayWeatherList.push(list[0]);
     let listOfFiveDays = [];
     for(let i = 0; i < list.length; i++) {
@@ -73,6 +75,8 @@ export class FiveDayWeatherComponent implements OnInit {
     }
     this.fiveDayWeatherList = fiveDayWeatherList.concat(listOfFiveDays);
     this.hourlyWeatherDaysList = fiveDayWeatherList.concat(listOfFiveDays);
+    console.log(this.fiveDayWeatherList);
+    return fiveDayWeatherList.concat(listOfFiveDays);
     // this.hourlyWeatherDaysList.shift();
   }
 

@@ -29,6 +29,7 @@ export class HeaderComponent implements OnInit {
       this.cityWeather = todayWeather;
       this.sendTodayWeather.emit(this.cityWeather);
     })
+    this.getFiveDayForecast();
   }
 
   getFiveDayForecast(): void {
